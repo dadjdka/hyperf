@@ -7,7 +7,11 @@
  */
 
 namespace App\Service;
+use App\JsonRpc\CalculatorServiceInterface;
+use App\JsonRpc\MathValue;
 use Hyperf\Di\Annotation\Inject;
+use Hyperf\Utils\ApplicationContext;
+
 class PingService
 {
     /**
@@ -17,6 +21,8 @@ class PingService
      */
     public function ping($params):array
     {
+
+
         return success($params);
     }
 }

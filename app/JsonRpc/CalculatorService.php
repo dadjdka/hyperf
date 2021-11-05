@@ -14,7 +14,7 @@ use Hyperf\RpcServer\Annotation\RpcService;
  */
 class CalculatorService implements CalculatorServiceInterface
 {
-    public function sum(MathValue $a, MathValue $b): MathValue
+    public function sum(int $a, int $b) :int
     {
         // 这里是服务方法的具体实现
         return $a + $b;

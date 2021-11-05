@@ -25,7 +25,7 @@ class CalculatorServiceConsumer extends AbstractServiceClient implements Calcula
      */
     protected $protocol = 'jsonrpc-http';
 
-    public function sum(MathValue $a, MathValue $b) : MathValue
+    public function sum(int $a, int $b): int
     {
         return $this->__request(__FUNCTION__, compact('a', 'b'));
     }

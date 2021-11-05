@@ -32,12 +32,12 @@ class PingController extends AbstractController
         $client = ApplicationContext::getContainer()->get(CalculatorServiceInterface::class);
 
         /** @var MathValue $result */
-        $result = $client->sum(new MathValue(1), new MathValue(2));
+        $result = $client->sum( 1, 2);
+//
+        var_dump($result);
 
-        var_dump($result->value);
-        return;
-        $params = $this->request->all();
-        $data = $this->ping->ping($params);
-        return $this->response->json($data);
+//        $params = $this->request->all();
+//        $data = $this->ping->ping($params);
+//        return $this->response->json($result);
     }
 }
